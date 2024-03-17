@@ -35,3 +35,5 @@ The provided code serves as a basic demonstration of how an HMS might function. 
 - Integration with Electronic Health Records (EHR): Connecting with electronic health record systems to access patient medical histories and treatment plans.
 
 To enhance user experience and efficiency, a graphical user interface (GUI) can be implemented to provide an intuitive interface for hospital staff to interact with the system. Additionally, the code can be modularized further to improve maintainability and scalability. Each functionality (e.g., patient management, appointment scheduling) can be encapsulated within its own class or module, following principles of object-oriented design and modular programming.
+<img width="769" alt="image" src="https://github.com/DSTAR15/DKT_Project2/assets/128448451/a0abf573-c9d1-4f5f-9590-b8261bbd292c">
+
