@@ -1,0 +1,63 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+
+class Patient {
+private:
+    string name;
+    int age;
+    string gender;
+    string diagnosis;
+
+public:
+    Patient(string n, int a, string g, string d) : name(n), age(a), gender(g), diagnosis(d) {}
+
+
+    string getName() { return name; }
+    int getAge() { return age; }
+    string getGender() { return gender; }
+    string getDiagnosis() { return diagnosis; }
+
+
+    void setDiagnosis(string d) { diagnosis = d; }
+};
+
+
+class HospitalManagementSystem {
+private:
+    vector<Patient> patients;
+
+public:
+
+    void addPatient(string name, int age, string gender, string diagnosis) {
+        Patient newPatient(name, age, gender, diagnosis);
+        patients.push_back(newPatient);
+    }
+
+
+    void displayPatients() {
+        cout << "List of Patients:\n";
+        for (int i = 0; i < patients.size(); ++i) {
+            cout << "Patient " << i + 1 << ":\n";
+            cout << "Name: " << patients[i].getName() << endl;
+            cout << "Age: " << patients[i].getAge() << endl;
+            cout << "Gender: " << patients[i].getGender() << endl;
+            cout << "Diagnosis: " << patients[i].getDiagnosis() << endl;
+            cout << endl;
+        }
+    }
+};
+
+int main() {
+    HospitalManagementSystem hms;
+
+    hms.addPatient("A", 35, "Male", "Fever");
+    hms.addPatient("B", 45, "Female", "Fracture");
+
+    hms.displayPatients();
+
+    return 0;
+}
